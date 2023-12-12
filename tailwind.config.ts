@@ -17,6 +17,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)'],
+        jakarta: ['var(--font-plus-jakarta-sans)'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -54,6 +55,7 @@ module.exports = {
         },
         'text-dark': '#1a1a1a',
         'text-secondary': '#6941C6',
+        darkgrey: '#9A9494',
       },
       borderRadius: {
         lg: 'var(--radius)',
