@@ -52,6 +52,8 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        'text-dark': '#1a1a1a',
+        'text-secondary': '#6941C6',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -71,6 +73,11 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      spacing: {
+        '7.5': '1.875rem',
+        '15': '3.75rem',
+        '305': '76.25rem',
       },
     },
   },
