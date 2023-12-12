@@ -1,9 +1,8 @@
 'use client';
 
 import { MenuIcon } from 'lucide-react';
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import Link from 'next/link';
-import { ModeToggle } from '../mode-toggle';
 import { Separator } from '../ui/separator';
 import Image from 'next/image';
 
@@ -11,7 +10,7 @@ export const MobileMenu = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <MenuIcon className="w-8 h-8 text-text-dark dark:text-white cursor-pointer sm:hidden" />
+        <MenuIcon className="w-8 h-8 text-text-dark dark:text-white cursor-pointer" />
       </SheetTrigger>
       <SheetContent side={'left'}>
         <SheetHeader>
