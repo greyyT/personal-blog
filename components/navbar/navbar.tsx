@@ -17,7 +17,7 @@ export const Navbar = () => {
           <Code2 className="text-text-secondary w-8 h-8 mr-2" />
           Nhan Nguyen
         </Link>
-        <div className="hidden sm:flex gap-[14px] items-center text-text-dark dark:text-white text-lg lg:text-xl">
+        <div className="hidden md:flex gap-[14px] items-center text-text-dark dark:text-white text-lg lg:text-xl">
           {navbarItems.map((item, idx) => (
             <Link key={idx} className="p-2" href={item.href}>
               {item.name}
@@ -27,7 +27,7 @@ export const Navbar = () => {
             <ModeToggle />
           </div>
         </div>
-        <div className="flex gap-2 sm:hidden items-center">
+        <div className="flex gap-2 md:hidden items-center">
           <ModeToggle />
           <MobileMenu />
         </div>
