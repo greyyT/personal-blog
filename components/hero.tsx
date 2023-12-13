@@ -3,24 +3,46 @@ import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { fadeIn } from '@/lib/motion';
 import { MotionDiv } from './motion-div';
-import { ArrowDown, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { socialMedia } from '@/lib/constants';
 
 export const Hero = () => {
   return (
-    <div className="md:h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex flex-col sm:flex-col-reverse md:grid grid-hero items-center w-full gap-14 xs:gap-20 md:gap-8 pt-12 xs:pt-16 md:p-0">
+    <div
+      className={cn(
+        'md:h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)]',
+        'flex flex-col sm:flex-col-reverse md:grid grid-hero',
+        'items-center gap-14 xs:gap-20 md:gap-8',
+        'w-full',
+        'pt-12 xs:pt-16 md:p-0',
+      )}
+    >
       <MotionDiv
         className="flex-1 flex flex-col md:justify-center h-full"
         variants={fadeIn('up', 'spring', 0, 0.75)}
         initial="hidden"
         animate="show"
       >
-        <div className="h-[6px] md:h-2 w-40 rounded-md dark:bg-white bg-[#2b2c34] mb-6 xs:mb-8 md:mb-12"></div>
-        <h1 className="font-jakarta text-[#2B2C34] dark:text-white font-bold text-4xl xs:text-[40px] md:text-[52px] md:leading-[64px] xl:text-[64px] xl:leading-[76px]">
+        <div className="h-[6px] md:h-2 w-40 rounded-md dark:bg-white bg-[#2b2c34] mb-6 xs:mb-8 md:mb-12" />
+        <h1
+          className={cn(
+            'font-jakarta font-bold',
+            'text-[#2B2C34] dark:text-white',
+            'text-4xl xs:text-[40px] md:text-[52px] xl:text-[64px]',
+            'md:leading-[64px] xl:leading-[76px]',
+          )}
+        >
           I’m <span className="text-text-secondary">Nhan</span>, a Fullstack Web Developer
         </h1>
-        <p className="mt-[10px] md:mt-4 lg:mt-5 dark:text-slate-300 text-slate-700 text-base md:text-lg md:leading-7 lgxl:text-xl lgxl:leading-8 font-light font-inter">
+        <p
+          className={cn(
+            'font-light font-inter',
+            'mt-[10px] md:mt-4 lg:mt-5',
+            'dark:text-slate-300 text-slate-700',
+            'text-base md:text-lg lgxl:text-xl',
+            'md:leading-7 lgxl:leading-8',
+          )}
+        >
           I’m an aspiring <span className="font-semibold text-text-secondary">Fullstack Web Developer</span> with a{' '}
           <span className="font-semibold text-text-secondary">strong foundation</span> in web technologies. Eager to
           apply my skills and passion to real-world projects, I aim to{' '}
