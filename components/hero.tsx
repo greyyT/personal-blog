@@ -9,7 +9,7 @@ import { socialMedia } from '@/lib/constants';
 
 export const Hero = () => {
   return (
-    <div className="md:h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex flex-col md:grid grid-hero items-center w-full gap-14 xs:gap-20 md:gap-8 pt-12 xs:pt-16 md:p-0">
+    <div className="md:h-[calc(100vh-60px)] lg:h-[calc(100vh-90px)] flex flex-col sm:flex-col-reverse md:grid grid-hero items-center w-full gap-14 xs:gap-20 md:gap-8 pt-12 xs:pt-16 md:p-0">
       <MotionDiv
         className="flex-1 flex flex-col md:justify-center h-full"
         variants={fadeIn('up', 'spring', 0, 0.75)}
@@ -27,8 +27,11 @@ export const Hero = () => {
           <span className="font-semibold text-text-secondary">expand my expertise</span>.
         </p>
         <Separator className="mt-10 md:mt-[52px] mb-5 h-[2px]" />
-        <div className="flex flex-col xs:flex-row justify-center items-start xs:justify-start xs:items-center gap-6">
-          <Link className="bg-text-secondary text-white px-8 py-3 text-xl font-semibold rounded-md" href="/contact">
+        <div className="flex items-center gap-4 xs:gap-6">
+          <Link
+            className="bg-text-secondary text-white px-6 py-2 xs:px-8 xs:py-3 text-lg xs:text-xl font-semibold rounded-md"
+            href="/contact"
+          >
             Contact Me
           </Link>
           <div className="flex gap-4">
@@ -43,7 +46,7 @@ export const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Icon className="w-8 h-8" />
+                  <Icon className="w-7 xs:w-8 h-7 xs:h-8" />
                 </a>
               );
             })}
