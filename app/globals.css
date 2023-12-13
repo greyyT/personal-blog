@@ -74,3 +74,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.grid-hero {
+  grid-template-columns: 1.2fr 1fr;
+}

@@ -6,13 +6,15 @@ module.exports = {
     container: {
       center: true,
       padding: '2rem',
-      screens: {
-        sm: '40rem',
-        md: '48rem',
-        lg: '64rem',
-        xl: '80rem',
-        '2xl': '87.5rem',
-      },
+    },
+    screens: {
+      xs: '30rem',
+      sm: '40rem',
+      md: '48rem',
+      lg: '64rem',
+      lgxl: '70rem',
+      xl: '80rem',
+      '2xl': '87.5rem',
     },
     extend: {
       fontFamily: {
