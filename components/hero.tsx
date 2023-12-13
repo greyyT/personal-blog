@@ -19,7 +19,13 @@ export const Hero = () => {
     >
       <MotionDiv
         className="flex-1 flex flex-col md:justify-center h-full"
-        variants={fadeIn('up', 'spring', 0, 0.75)}
+        variants={fadeIn({
+          direction: 'up',
+          type: 'spring',
+          delay: 0,
+          duration: 0.75,
+          offset: 100,
+        })}
         initial="hidden"
         animate="show"
       >
@@ -75,7 +81,18 @@ export const Hero = () => {
           </div>
         </div>
       </MotionDiv>
-      <MotionDiv className="relative" variants={fadeIn('up', 'spring', 0.25, 0.75)} initial="hidden" animate="show">
+      <MotionDiv
+        className="relative"
+        variants={fadeIn({
+          direction: 'up',
+          type: 'spring',
+          delay: 0.25,
+          duration: 0.75,
+          offset: 100,
+        })}
+        initial="hidden"
+        animate="show"
+      >
         <div
           className={cn(
             'absolute',
