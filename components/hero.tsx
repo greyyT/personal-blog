@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { fadeIn } from '@/lib/motion';
-import { MotionDiv } from './motion-div';
+import { MotionDiv } from '@/components/motion-component';
 import Link from 'next/link';
 import { socialMedia } from '@/lib/constants';
 
