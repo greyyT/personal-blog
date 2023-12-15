@@ -14,10 +14,19 @@ interface MotionFadeInProps {
   delay: number;
   duration: number;
   offset: number;
+  rootMargin?: string;
 }
 
-export const MotionFadeIn = ({ children, direction, type, delay, duration, offset }: MotionFadeInProps) => {
-  const [ref, inView] = useInView({ triggerOnce: true });
+export const MotionFadeIn = ({
+  children,
+  direction,
+  type,
+  delay,
+  duration,
+  offset,
+  rootMargin = '0px',
+}: MotionFadeInProps) => {
+  const [ref, inView] = useInView({ triggerOnce: true, rootMargin });
 
   const mainControls = useAnimation();
 
@@ -49,10 +58,11 @@ interface MotionZoomInProps {
   children: React.ReactNode;
   delay: number;
   duration: number;
+  rootMargin?: string;
 }
 
-export const MotionZoomIn = ({ children, delay, duration }: MotionZoomInProps) => {
-  const [ref, isInView] = useInView({ triggerOnce: true });
+export const MotionZoomIn = ({ children, delay, duration, rootMargin = '0px' }: MotionZoomInProps) => {
+  const [ref, isInView] = useInView({ triggerOnce: true, rootMargin });
 
   const mainControls = useAnimation();
 

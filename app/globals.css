@@ -75,6 +75,20 @@
   }
 }
 
+@layer components {
+  .timeline-right .timeline-metadata {
+    @apply float-right;
+  }
+
+  .timeline-right .timeline-date {
+    @apply justify-end;
+  }
+
+  .timeline-right .timeline-text {
+    @apply text-right;
+  }
+}
+
 .grid-hero {
   grid-template-columns: 1.2fr 1fr;
 }
