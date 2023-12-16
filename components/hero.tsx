@@ -15,6 +15,9 @@ export const Hero = () => {
         'items-center gap-14 xs:gap-20 md:gap-8',
         'w-full',
         'pt-12 xs:pt-16 md:p-0',
+        'bg-background z-20',
+        'pb-20 md:pb-0',
+        'z-30',
       )}
     >
       <MotionDiv
