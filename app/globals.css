@@ -77,15 +77,15 @@
 
 @layer components {
   .timeline-right .timeline-metadata {
-    @apply float-right;
+    @apply md:float-right;
   }
 
   .timeline-right .timeline-date {
-    @apply justify-end;
+    @apply md:justify-end;
   }
 
   .timeline-right .timeline-text {
-    @apply text-right;
+    @apply md:text-right;
   }
 }
 
@@ -99,4 +99,13 @@
 
 .linear-bottom-white {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.gradient-line {
+  background: rgb(105, 65, 198);
+  background: linear-gradient(360deg, rgba(105, 65, 198, 1) 0%, rgba(129, 14, 223, 1) 69%, rgba(0, 56, 254, 1) 100%);
+}
+
+.timeline-grid {
+  grid-template-columns: 24px 1fr;
 }

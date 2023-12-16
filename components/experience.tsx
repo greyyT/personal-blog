@@ -21,13 +21,17 @@ import { Aisia, Hcmus } from '@/public/company';
 export const Experience = () => {
   return (
     <>
-      <MotionFadeIn delay={0.2} direction="up" duration={0.75} offset={20} type="spring">
-        <p className="text-xl uppercase font-bold mb-2">
-          <span className="text-text-secondary text-2xl mr-2">/</span> What I have done so far
-        </p>
-        <h1 className="font-bold text-[52px] leading-[64px] font-jakarta">Work Experience.</h1>
-      </MotionFadeIn>
-      <div className="pt-28"></div>
+      <div className="z-30 bg-background">
+        <MotionFadeIn delay={0.2} direction="up" duration={0.75} offset={20} type="spring">
+          <p className="xs:text-lg md:text-xl uppercase font-bold mb-2">
+            <span className="text-text-secondary text-xl mr-2">/</span> What I have done so far
+          </p>
+          <h1 className="font-bold text-4xl xs:text-[40px] xs:leading-[52px] md:text-[52px] md:leading-[64px] font-jakarta">
+            Work Experience.
+          </h1>
+        </MotionFadeIn>
+      </div>
+      <div className="md:pt-18 lg:pt-28"></div>
       <Timeline>
         <TimelineCard idx={0}>
           <TimelineMetadata>
@@ -40,7 +44,7 @@ export const Experience = () => {
             <TimelineBox>
               <TimelineTag>education</TimelineTag>
               <TimelineImage image={Hcmus} alt="Hcmus" />
-              <TimelineHeading>Data Science</TimelineHeading>
+              <TimelineHeading className="mt-2">Data Science</TimelineHeading>
               <p className="text-xs font-light mt-[2px]">Current GPA: 3.24/4</p>
               <p className="mt-4">
                 I am currently pursuing a Bachelor Degree in Data Science at University of Science, Ho Chi Minh City. I
@@ -67,12 +71,10 @@ export const Experience = () => {
             <TimelineBox>
               <TimelineTag>freelancer</TimelineTag>
               <TimelineImage image={Aisia} alt="Aisia" />
-              <TimelineHeading>
-                My first job as a <span className="text-text-secondary">Frontend Developer</span>
-              </TimelineHeading>
+              <TimelineHeading className="mt-2">Freelance Frontend Developer</TimelineHeading>
               <p className="mt-4">
-                I am currently pursuing a Bachelor Degree in Data Science at University of Science, Ho Chi Minh City. I
-                am expected to graduate in 2025.
+                I was hired as a Frontend Developer to build the frontend of a web application for Aisia Research Lab
+                using Ruby on Rails template engine.
               </p>
             </TimelineBox>
           </TimelineContent>
