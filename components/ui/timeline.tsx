@@ -28,7 +28,7 @@ const Timeline = ({ children }: { children: React.ReactNode }) => {
         className={cn(
           'absolute top-8 md:-top-12 -bottom-12',
           '-left-4 -right-4 md:left-10 md:right-10 lg:left-18 lg:right-18 xl:left-28 xl:right-28',
-          'bg-slate-200/40 dark:bg-slate-700',
+          'bg-slate-200/40 dark:bg-background',
           'md:rounded-[32px]',
         )}
       ></div>
@@ -40,11 +40,11 @@ const Timeline = ({ children }: { children: React.ReactNode }) => {
         )}
       />
       <div className="absolute -top-8 md:-top-28 left-[11px] md:left-1/2 md:-translate-x-1/2 w-2 h-16 bg-background z-20"></div>
-      <div className="absolute top-8 md:-top-12 left-[11px] md:left-1/2 md:-translate-x-1/2 w-2 h-12 bg-[#f3f6f9] z-30"></div>
+      <div className="absolute top-8 md:-top-12 left-[11px] md:left-1/2 md:-translate-x-1/2 w-2 h-12 bg-[#f3f6f9] dark:bg-background z-30"></div>
       <div className="absolute bottom-14 -top-[50vh] left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] rounded-b-md z-10">
         <div className="w-[6px] top-0 sticky gradient-line z-10 h-[50vh]"></div>
       </div>
-      <div className="absolute linear-top-white top-18 left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] h-8 md:h-14"></div>
+      <div className="absolute linear-top-white top-18 md:top-4 left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] h-8 md:h-14"></div>
       <div className="absolute linear-bottom-white top-[calc(100%-40px)] left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] h-10 backdrop-blur-2xl"></div>
       <div className="mt-14"></div>
       {children}
@@ -94,7 +94,7 @@ const TimelineTitle = ({ children }: { children: string }) => {
 };
 
 const TimelineCompany = ({ children }: { children: string }) => {
-  return <p className="timeline-text font-light text-text-dark mt-[2px] md:mt-1">{children}</p>;
+  return <p className="timeline-text font-light text-text-dark dark:text-white mt-[2px] md:mt-1">{children}</p>;
 };
 
 const TimelineCircle = () => {
@@ -112,7 +112,9 @@ const TimelineContent = ({ children }: { children: React.ReactNode }) => {
 const TimelineBox = ({ children }: { children: React.ReactNode }) => {
   return (
     <MotionZoomIn delay={0.15} duration={0.5} rootMargin="-300px 0px">
-      <div className="p-4 lg:p-6 xl:pl-12 xl:pr-10 bg-white drop-shadow rounded-[16px] relative">{children}</div>
+      <div className="p-4 lg:p-6 xl:pl-12 xl:pr-10 bg-white dark:bg-[#1d1836] shadow-white shadow-sm drop-shadow rounded-[16px] relative">
+        {children}
+      </div>
     </MotionZoomIn>
   );
 };
