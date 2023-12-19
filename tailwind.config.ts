@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-sans)'],
         jakarta: ['var(--font-plus-jakarta-sans)'],
+        'san-francisco': ['var(--font-san-francisco)'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -86,6 +87,7 @@ module.exports = {
         '20': '5rem',
         '26': '6.5rem',
         '28': '7rem',
+        '60': '15rem',
         '305': '76.25rem',
       },
     },
