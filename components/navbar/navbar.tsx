@@ -19,7 +19,7 @@ export const Navbar = () => {
         </Link>
         <div className="hidden md:flex gap-[14px] items-center text-text-dark dark:text-white text-lg lg:text-xl">
           {navbarItems.map((item, idx) => (
-            <Link key={idx} className="p-2" href={item.href}>
+            <Link key={idx} className="p-2 hover:text-text-secondary hover:scale-105 transition" href={item.href}>
               {item.name}
             </Link>
           ))}
