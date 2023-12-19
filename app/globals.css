@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'San Francisco';
+  src: url('https://uploadthing.com/f/54a0767e-2ed8-40c0-8ddd-d179b5a6ba7b-g75vai.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('https://uploadthing.com/f/f7576d04-d449-4308-b077-f932f4fc8b50-jkn1h4.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('https://uploadthing.com/f/64264e83-3d45-49b3-812f-93c3963adcba-pl8zk6.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('https://uploadthing.com/f/63cb5e9b-8c90-409c-8006-bbefc19b44a3-mafubu.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('https://uploadthing.com/f/1ab7d776-5cfa-4d25-9850-67584ff51b8c-3d85lc.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -33,6 +68,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    --font-san-francisco: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   }
 
   .dark {

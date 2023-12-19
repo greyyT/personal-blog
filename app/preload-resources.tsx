@@ -23,6 +23,6 @@ export function PreloadResources() {
     as: 'font',
     crossOrigin: 'anonymous',
   });
-  // Hello
+
   return null;
 }
