@@ -27,7 +27,7 @@ export const Experience = () => {
             <span className="text-text-secondary text-xl mr-2">/</span> What I have done so far
           </p>
           <h1 className="font-bold text-4xl xs:text-[40px] xs:leading-[52px] md:text-[52px] md:leading-[64px] font-jakarta">
-            Work Experience.
+            Work Experience
           </h1>
         </MotionFadeIn>
       </div>

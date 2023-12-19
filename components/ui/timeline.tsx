@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -8,45 +8,31 @@ import Image, { StaticImageData } from 'next/image';
 import { MotionFadeIn, MotionZoomIn } from '@/components/motion-component';
 
 const Timeline = ({ children }: { children: React.ReactNode }) => {
-  const [windowHeight, setWindowHeight] = useState<number | null>(null);
-
-  useEffect(() => {
-    setWindowHeight(window.innerHeight);
-
-    const handleResize = () => {
-      setWindowHeight(window.innerHeight);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <div className="flex flex-col gap-12 sm:pr-6 md:pr-0 md:gap-0 items-center h-full relative">
+    <div className="flex flex-col gap-12 sm:pr-6 md:pr-0 md:gap-16 items-center h-full relative">
       <div
         className={cn(
           'absolute top-8 md:-top-12 -bottom-12',
           '-left-4 -right-4 md:left-10 md:right-10 lg:left-18 lg:right-18 xl:left-28 xl:right-28',
-          'bg-slate-200/40 dark:bg-background',
+          'bg-slate-200/40 dark:bg-[#091520]',
           'md:rounded-[32px]',
         )}
       ></div>
       <div
         className={cn(
-          'w-[6px] rounded-b-md',
-          'absolute top-24 md:top-14 bottom-10 left-[11px] md:left-1/2 md:-translate-x-1/2',
+          'w-[6px]',
+          'absolute top-28 md:top-24 bottom-10 left-[11px] md:left-1/2 md:-translate-x-1/2',
           'bg-white drop-shadow-xl',
         )}
       />
       <div className="absolute -top-8 md:-top-28 left-[11px] md:left-1/2 md:-translate-x-1/2 w-2 h-16 bg-background z-20"></div>
-      <div className="absolute top-8 md:-top-12 left-[11px] md:left-1/2 md:-translate-x-1/2 w-2 h-12 bg-[#f3f6f9] dark:bg-background z-30"></div>
+      <div className="absolute top-8 md:-top-12 left-[11px] md:left-1/2 md:-translate-x-1/2 w-2 h-12 md:h-20 bg-[#f3f6f9] dark:bg-background z-30"></div>
       <div className="absolute bottom-14 -top-[50vh] left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] rounded-b-md z-10">
         <div className="w-[6px] top-0 sticky gradient-line z-10 h-[50vh]"></div>
       </div>
-      <div className="absolute linear-top-white top-18 md:top-4 left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] h-8 md:h-14"></div>
+      <div className="absolute linear-top-white top-18 md:top-8 left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] h-8 md:h-14"></div>
       <div className="absolute linear-bottom-white top-[calc(100%-40px)] left-[11px] md:left-1/2 md:-translate-x-1/2 w-[6px] h-10 backdrop-blur-2xl"></div>
-      <div className="mt-14"></div>
+      <div className="mt-14 md:mt-4"></div>
       {children}
     </div>
   );
@@ -70,7 +56,7 @@ const TimelineCard = ({ children, idx }: { children: React.ReactNode; idx: numbe
 const TimelineMetadata = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="col-start-2 flex-1">
-      <div className="timeline-metadata sticky top-1/2 md:w-64">
+      <div className="timeline-metadata md:w-64">
         <MotionFadeIn delay={0} direction="up" duration={0.75} offset={20} type="spring" rootMargin="-100px 0px">
           {children}
         </MotionFadeIn>
